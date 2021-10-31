@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="asteroid_title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/asteroid_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="asteroid_date">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">@dimen/asteroid_date</item>
+    </style>
+
+</resources>

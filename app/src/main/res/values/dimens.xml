@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+
+    <dimen name="asteroid_title">18sp</dimen>
+    <dimen name="asteroid_date">16sp</dimen>
+</resources>

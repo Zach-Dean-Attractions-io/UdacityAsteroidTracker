@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="asteroid"
+            type="com.udacity.asteroidradar.Asteroid" />
+        <variable
+            name="clickListener"
+            type="com.udacity.asteroidradar.main.AsteroidClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(asteroid)}">
+
+        <TextView
+            android:id="@+id/asteroid_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/asteroid_title"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:text="@{asteroid.component2()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/asteroid_icon"
+            app:layout_constraintBottom_toTopOf="@+id/asteroid_date"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            tools:text="Asteroid Title"
+            tools:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/asteroid_date"
+            style="@style/asteroid_date"
+            android:text="@{asteroid.component3()}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/asteroid_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/asteroid_icon"
+            tools:text="Asteroid Date" />
+
+        <ImageView
+            android:id="@+id/asteroid_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            app:statusIconContentDescription="@{asteroid.component8()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/asteroid_title"
+            android:src="@drawable/ic_status_potentially_hazardous"
+            tools:src="@drawable/ic_status_potentially_hazardous"
+            app:statusIcon="@{asteroid.component8()}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
